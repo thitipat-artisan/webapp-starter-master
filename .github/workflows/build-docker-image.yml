@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Build
+        run: yarn build
       - name: Build vue-app
         run: |
           ./build.sh react-app
