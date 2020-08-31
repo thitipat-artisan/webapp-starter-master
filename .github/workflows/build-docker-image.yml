@@ -16,11 +16,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Build
-        run: yarn build
       - name: Build vue-app
         run: |
-          ./build.sh react-app
+          ./build.sh vue-app
           # docker build -t "$PROJECT_ID/$SERVICE_NAME:${GITHUB_SHA}" .
       - name: Build and push Docker images
         uses: docker/build-push-action@v1
